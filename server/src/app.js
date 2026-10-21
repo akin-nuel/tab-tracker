@@ -14,9 +14,9 @@ app.use(cors())
 
 const PORT = 8080
 
-app.get("/status", (req, res)=> {
+app.post("/register", (req, res)=> {
     res.send({
-        message: "Hello world"
+        message: `Hello ${req.body.name}, ${req.body.email} has been registered. Welcome to the platform. Have a great day`
     })
 })
 
